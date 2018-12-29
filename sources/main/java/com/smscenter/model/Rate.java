@@ -17,8 +17,28 @@ public class Rate {
     private Long id;
 
     @Column(name = "is_active", nullable = false, columnDefinition = "boolean DEFAULT true")
-    boolean isActive = true;
+    private boolean isActive = true;
 
     @Column(name = "title", nullable = false)
     private String title;
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public boolean isActive() {
+        return this.isActive;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
